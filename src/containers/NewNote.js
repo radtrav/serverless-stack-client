@@ -23,6 +23,7 @@ export default function NewNote() {
   }
 
   async function handleSubmit(event) {
+
     event.preventDefault();
 
     if (file.current && file.current.size > config.MAX_ATTACHMENT_SIZE) {
@@ -38,7 +39,6 @@ export default function NewNote() {
 
     try {
       const attachment = file.current ? await s3Upload(file.current) : null;
-
       await createNote({ content, attachment });
       history.push("/");
     } catch (e) {

@@ -79,15 +79,13 @@ export default function Notes() {
       if (file.current) {
         attachment = await s3Upload(file.current);
       }
+      console.log('saving note')
 
       await saveNote({
         content,
         attachment: attachment || note.attachment
       });
 
-      await API.put("notes", `/notes/${id}`, {
-        body: note
-      });
       history.push("/");
     } catch (e) {
       onError(e);
