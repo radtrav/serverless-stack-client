@@ -20,7 +20,7 @@ const prod = {
   STRIPE_KEY: "pk_test_XpPhGkklx2hsnneMmyoeDwtf00oJ5Okli3",
   s3: {
     REGION: "us-east-2",
-    BUCKET: "notes-app-2-api-prod-serverlessdeploymentbucket-ausb62qboojh"
+    BUCKET: "notes-app-2-api-prod-attachmentsbucket-o83ydl7aitxm"
   },
   apiGateway: {
     REGION: "us-east-2",
